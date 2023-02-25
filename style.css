@@ -77,4 +77,14 @@ img{
     height: 50px;
 }
 
-@media (min-width:300px)
+@media (min-width:300px) and (max-width:500px){
+    body{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .advice{
+        max-width: 40rem;
+    }
+    
+}
