@@ -40,11 +40,11 @@ p{
     color: var(--Neon-Green);
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-size: 12px;
+    font-size: clamp(10px, 2vw, 12px);
 }
 h2{
     color: var(--Light-Cyan);
-    font-size: 28px;
+    font-size:clamp(18px, 2vw, 28px);
 }
 picture img{
     margin-bottom: 1rem;
@@ -73,7 +73,9 @@ button:hover{
 
 @media  screen and (max-width: 500px) {
     .advice-card{
-        width: 350px;
+        max-width: 250px;
     }
-    
+    picture img{
+        width: 75%;
+    }
 }
