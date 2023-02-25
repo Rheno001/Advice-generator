@@ -1,13 +1,15 @@
-const adviceBtn = document.querySelector(".advice-btn");
-const adviceId = document.querySelector(".advice-id");
-const advicetext = document.querySelector(".advice-text");
+const adviceId = document.getElementById("advice-id");
+const adviceTxt = document.getElementById("advice-text");
+const adviceBtn = document.getElementById("generate-btn");
+const url = "https://api.adviceslip.com/advice";
 
-const fetchData = async () => {
-    const res = await fetch("https://api.adviceslip.com/advice");
-    const data = await res.json()
-    const{slip} = data
-    adviceId.innerHTML = '#$(slip.id)'
-    advicetext.innerHTML = slip.advice
-};
-fetchData()
-adviceBtn.addEventListener("click", fetchData);
+async function getAdvice() {
+    const res = await fetch(url);
+    const {slip:{id,advice}} = await res.json();
+    adviceId.innerText = id;
+    adviceTxt.innerText = advice;
+}
+
+getAdvice()
+
+adviceBtn.addEventListener("click",getAdvice)
