@@ -15,7 +15,7 @@ body{
 .main{
     height: 100vh;
     width: 100%;
-    background-color: hsl(217, 19%, 38%);
+    background-color: hsl(218, 23%, 16%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +24,7 @@ body{
 .advice{
     max-width: 55rem;
     width: 90%;
-    background-color: rgb(31, 77, 31);
+    background-color: hsl(217, 19%, 24%);
     padding: 3rem;
     border-radius: 2rem;
     position: relative;
@@ -41,7 +41,7 @@ body{
 }
 .advice-title{
     font-size: 1.6rem;
-    color: yellow;
+    color: hsl(150, 100%, 66%);
     margin-bottom: 2rem;
     letter-spacing: 0.2rem;
 }
@@ -60,7 +60,7 @@ body{
     transform: translateX(-50%);
     height: 4rem;
     width: 4rem;
-    background-color: aqua;
+    background-color: hsl(150, 100%, 66%);
     transition: all .3s;
     border-radius: 100%;
     cursor: pointer;
@@ -76,15 +76,18 @@ img{
     width: 50px;
     height: 50px;
 }
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
 
-@media (min-width:300px) and (max-width:500px){
-    body{
-        font-size: 1rem;
-        font-weight: 700;
-    }
-
+@media screen and (max-width:500px) {
     .advice{
-        max-width: 40rem;
+        width: 80%;
+    }
+    .advice-title span{
+        font-size: 16px;
+    }
+    .advice-text{
+        font-size: 14px;
     }
     
 }

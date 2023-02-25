@@ -8,33 +8,22 @@
   <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Advice generator app</title>
-  <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-    <main class="main">
-        <div class="advice">
-            <h4 class="advice-title">
-                <span>advice</span>
-                <span class="advice-id"></span>
-            </h4>
-            <p class="advice-text"></p>
-            <figure class="advice-line">
-                <img src="images/pattern-divider-desktop.svg" alt="">
-                
-            </figure>
-
-            <div class="advice-btn">
+    <div class="advice-card">
+        <div class="card-container">
+            <p>Advice # <span id="advice-id"></span></p>
+            <h2>" <span id="advice-text"></span>"</h2>
+            <picture>
+                <source media="(max-width: 500px)" srcset="./images/pattern-divider-mobile.svg">
+                <img src="./images/pattern-divider-desktop.svg" alt="pattern">
+            </picture>
+            <button id="generate-btn">
                 <img src="images/icon-dice.svg" alt="">
-            </div>
+            </button>
         </div>
-    </main>
-
+    </div>
+ 
     <script src="text.js"></script>
   
   <div class="attribution">
